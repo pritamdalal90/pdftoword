@@ -1,0 +1,18 @@
+@ECHO OFF
+@setlocal
+set PDF_FILE=%1
+set DOC_FILE=%2
+IF "%1"=="" GOTO :INSUFFICIENT_DATA
+IF "%2"=="" GOTO :INSUFFICIENT_DATA
+
+CALL pdf2word -q -m -i %PDF_FILE% -o %DOC_FILE%
+GOTO :SUCCESS
+
+:INSUFFICIENT_DATA
+ECHO.Insufficient Data
+
+:SUCCESS
+ECHO.OK
+
+@endlocal
+EXIT /B

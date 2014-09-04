@@ -1,0 +1,195 @@
+@charset "utf-8";
+/* CSS Document */
+*
+{
+	margin:0 auto;
+	padding:0px;
+}
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+body {
+	position: absolute;
+	width: 100%;	
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin:0px;
+	padding:0px;
+}
+
+h1{font-size:20px;}
+h2{font-size:16px;}
+h3{font-size:14px;}
+h4{font-size:12px;}
+h5{font-size:11px;}
+
+/********RESET********/
+
+/* set image max width to 100% */
+img {
+	max-width: 100%;
+	height: auto; border:0 none;
+	width: auto\9; /* ie8 */
+}
+
+/* set html5 elements to block */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, banner { 
+    display: block;
+}
+
+#page {
+	height: auto !important;
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+#main {
+	min-height: 400px;
+    padding-bottom: 58px;
+    position: relative;
+}
+
+header.page-header {
+	color: #ffffff;
+    margin-bottom: 64px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.container {
+	width:1100px;
+	margin:auto;
+}
+.container:after {
+	clear:both;
+}
+.left:last-child:after {
+	clear:both;
+}
+.right:last-child:after {
+	clear:both;
+}
+footer.page-footer {
+	background:#444444;
+    bottom: 0;
+    color: #ffffff;
+    height: 24px;
+    left: 0;
+    margin-top: 26px;
+    padding:12px 0 4px;
+    position: absolute;
+	width:100%;
+}
+
+.element-block {
+    padding:10px;
+}
+.element-title {
+	border-bottom: 1px solid #CCCCCC;
+    color: #8CC84B;
+    margin-bottom: 3px;
+    padding: 2px;
+}
+.left {
+	float:left;
+}
+.right {
+	float:right;
+}
+.clear {
+	clear:both;
+	height:0px
+}
+
+.full-width {
+	width:100%;
+}
+
+.wd90p {
+	width:90%;
+	margin:auto;
+}
+.wd80p {
+	width:80%;
+	margin:auto;
+}
+.wd70p {
+	width:70%;
+	margin:auto;
+}
+.wd60p {
+	width:60%;
+	margin:auto;
+}
+.wd50p {
+	width:50%;
+	margin:auto;
+}
+.wd40p {
+	width:40%;
+	margin:auto;
+}
+.wd30p {
+	width:30%;
+	margin:auto;
+}
+.wd33p {
+	width:33%;
+	margin:auto;
+}
+.wd45p {
+	width:45%;
+	margin:auto;
+}
+.wd20p {
+	width:20%;
+	margin:auto;
+}
+.wd10p {
+	width:10%;
+	margin:auto;
+}
+.wd5p {
+	width:5%;
+	margin:auto;
+}
+.black {
+	color:#333333;
+}
+.marB5px {
+	margin-bottom:5px;
+}
+.marB10px {
+	margin-bottom:10px;
+}
+.marB15px {
+	margin-bottom:15px;
+}
+.marB20px {
+	margin-bottom:20px;
+}
+.marB25px {
+	margin-bottom:25px;
+}
+
+.marT5px {
+	margin-top:5px;
+}
+.marT10px {
+	margin-top:10px;
+}
+.marT15px {
+	margin-top:15px;
+}
+.marT20px {
+	margin-top:20px;
+}
+.marT25px {
+	margin-top:25px;
+}
