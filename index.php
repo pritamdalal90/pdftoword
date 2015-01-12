@@ -1,9 +1,12 @@
 <?php
 include_once('includes/config.php');
+ini_set('max_execution_time','300000');
+//exec("cmd dir/w/a/o/p",$resp);print_r($resp);die('_______');
 if(!empty($_POST) || !empty($_FILES)) {
-	$result = UploadFile($_FILES['upload_file'],FILES_DIR,$_FILES['upload_file']['name'],array('pdf','PDF'));
+	$newFile = date("Ymdhis")."_PDF.pdf";
+	$result = UploadFile($_FILES['upload_file'],FILES_DIR,$newFile,array('pdf','PDF'));
 	if($result>0) {
-		$pathInfo = @pathinfo($_FILES['upload_file']['name']);
+		$pathInfo = @pathinfo($newFile);
 		try {
 			$FileName = $pathInfo['filename'];
 			$INC_PATH = str_replace('/',"\\",__DIR__."\\".INC_DIR);
@@ -16,10 +19,11 @@ if(!empty($_POST) || !empty($_FILES)) {
 				$downloadFile = FILES_DIR.date('Ymdhis')."-doc.doc";
 			}
 			if(file_exists($INC_PATH."convertPDF_DOCX.bat")) {
-				//$converted = exec("cmd /B /c ".$INC_PATH."convertPDF_DOCX.bat ".$pathToPdfFile." ".$pathToDocFile,$result);
-				$converted = exec("cmd /B /C ".$INC_PATH."convertPDF_DOCX.bat ".$pathToPdfFile." ".$pathToDocFile,$result);
+				//$converted = exec("cmd /B /C ".$INC_PATH."convertPDF_DOCX.bat ".$pathToPdfFile." ".$pathToDocFile,$result);
+				$converted = exec($INC_PATH."convertPDF_DOCX.bat ".$pathToPdfFile." ".$pathToDocFile,$result);
 				if(strrpos(trim($converted),"OK") !== false) {
-					//@header('location:'.$downloadFile);
+					@header('location:'.HTTP_PATH);
+					@header('location:'.$downloadFile);
 					setNotification("Your pdf successfully converted to docx.. ",50,"success","center",500,6000);
 				} else {
 					setNotification("Failed to convert .. Internal error !!",50,"error","center",300,6000);

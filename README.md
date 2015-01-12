@@ -1,7 +1,9 @@
 pdftoword
 =========
 
-This PHP application will convert any PDF file to a word document. This application uses Very Pdf desktop application and It will call that very-pdf desktop application from a batch file. To setup please follow instructions in assets/software/reference-pics/ directory
+This PHP application will convert any PDF file to a word document. This application uses Very Pdf desktop application and It will call that very-pdf desktop application from a batch file. To setup please follow instructions in assets/software/reference-pics/ directory.
+
+The software needed is in assets/software/Very.PDF.to.Word.Converter.v3.0.zip.
 
 1. INSTALL Very.PDF.to.Word.Converter.v3.0 in your pc.
 2. Suppoe I installed it in C:\Program Files (x86)\VeryPDF PDF2Word v3.0.
